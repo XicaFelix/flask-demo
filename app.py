@@ -13,7 +13,7 @@ def hello():
 
 @app.route("/user/<username>")
 def show_username(username):
-  return f"user {escape(username)}"
+  return render_template("index.html", username = escape(username))
 
 @app.route("/about")
 def about():
